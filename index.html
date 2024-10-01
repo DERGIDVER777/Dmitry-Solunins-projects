@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример изменения цвета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Привет, мир!</h1>
+    
+    <p id="paragraph">Это первый абзац текста, который будет изменен по клику.</p>
+    
+    <p>Это второй абзац и он не изменится .</p>
+    
+    <p>Третий абзац тоже не изменится.</p>
+    
+    <button onclick="changeText()">Нажми меня</button>
+</div>
+
+<script>
+    function changeText() {
+        var paragraph = document.getElementById('paragraph');
+        paragraph.textContent = 'Абзац изменился,и у него другой цвет!';
+        paragraph.style.color = 'red'; 
+    }
+</script>
+
+</body>
+</html>
